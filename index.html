@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김혜빈 포트폴리오</title>
+
+    <!-- 제이쿼리 슬릭슬라이더 스크립트 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- 메뉴 -->
+    <header>
+        <nav>
+            <ul>
+                <a href="#mainSlide"><li class="menuBtn underline">HOME</li></a>
+                <a href="#introduction"><li class="menuBtn underline">INTRODUCTION</li></a>   
+                <a href="#project"><li class="menuBtn underline">PROJECT</li></a> 
+                <a href="#contact"><li class="menuBtn underline">CONTACT</li></a> 
+            </ul>
+        </nav>
+        <div id="mobileNav">
+            <ul>
+                <a href="#mainSlide">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" viewBox="0 0 48 48"><path d="M8 42V18L24.1 6 40 18v24H28.3V27.75h-8.65V42Zm3-3h5.65V24.75H31.3V39H37V19.5L24.1 9.75 11 19.5Zm13-14.65Z"/></svg>
+                    </li>
+                </a>
+                <a href="#introduction">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" viewBox="0 0 48 48"><path d="M31.3 21.35q1.15 0 1.925-.775Q34 19.8 34 18.65t-.775-1.925q-.775-.775-1.925-.775t-1.925.775q-.775.775-.775 1.925t.775 1.925q.775.775 1.925.775Zm-14.6 0q1.15 0 1.925-.775.775-.775.775-1.925t-.775-1.925q-.775-.775-1.925-.775t-1.925.775Q14 17.5 14 18.65t.775 1.925q.775.775 1.925.775Zm7.3 13.6q3.3 0 6.075-1.775Q32.85 31.4 34.1 28.35h-2.6q-1.15 2-3.15 3.075-2 1.075-4.3 1.075-2.35 0-4.375-1.05t-3.125-3.1H13.9q1.3 3.05 4.05 4.825Q20.7 34.95 24 34.95ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 23.95q0-4.1 1.575-7.75 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24.05 4q4.1 0 7.75 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm0-20Zm0 17q7.1 0 12.05-4.975Q41 31.05 41 24q0-7.1-4.95-12.05Q31.1 7 24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24 41Z"/></svg>
+                    </li>
+                </a>   
+                <a href="#project">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" viewBox="0 0 48 48"><path d="M28.5 40v-3h6q1.05 0 1.775-.725Q37 35.55 37 34.5v-5q0-1.85 1.125-3.3 1.125-1.45 2.875-2v-.4q-1.75-.5-2.875-1.975T37 18.5v-5q0-1.05-.725-1.775Q35.55 11 34.5 11h-6V8h6q2.3 0 3.9 1.6t1.6 3.9v5q0 1.05.725 1.775Q41.45 21 42.5 21H44v6h-1.5q-1.05 0-1.775.725Q40 28.45 40 29.5v5q0 2.3-1.6 3.9T34.5 40Zm-15 0q-2.3 0-3.9-1.6T8 34.5v-5q0-1.05-.725-1.775Q6.55 27 5.5 27H4v-6h1.5q1.05 0 1.775-.725Q8 19.55 8 18.5v-5q0-2.3 1.6-3.9T13.5 8h6v3h-6q-1.05 0-1.775.725Q11 12.45 11 13.5v5q0 1.85-1.125 3.325T7 23.8v.4q1.75.55 2.875 2T11 29.5v5q0 1.05.725 1.775Q12.45 37 13.5 37h6v3Z"/></svg>
+                    </li>
+                </a> 
+                <a href="#contact">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" viewBox="0 0 48 48"><path d="M7 40q-1.2 0-2.1-.9Q4 38.2 4 37V11q0-1.2.9-2.1Q5.8 8 7 8h34q1.2 0 2.1.9.9.9.9 2.1v26q0 1.2-.9 2.1-.9.9-2.1.9Zm17-15.1L7 13.75V37h34V13.75Zm0-3L40.8 11H7.25ZM7 13.75V11v26Z"/></svg>
+                    </li>
+                </a> 
+            </ul>
+        </div>
+    </header>
+
+<!-- ------------------------------------- 1. 메인 슬라이드 -->
+    <article id="mainSlide">
+<!-- 텍스트 슬라이드 -->
+        <div class="text-slider-wrapper">
+            <div class="text-slider">
+                <div class="text-slide">
+                    <h1 class="design_tool">FILM MAKER <br />
+                        <span>Pr</span><span>Ae</span>
+                    </h1>                                               
+              </div>
+                  <div class="text-slide">
+                        <h1 class="design_tool">UI/UX DESIGN <br />
+                            <span>Ps</span><span>Ai</span><span>Xd</span>
+                        </h1>                                               
+                  </div>
+                  <div class="text-slide">
+                        <h1 class="pub_tool">WED/MOBILE<br />PUBLISHING<br />
+                            <span>HTML</span><span>CSS</span><span>JS
+                        </h1>
+                  </div>
+                 
+            </div>
+        </div>
+<!-- 이전 다음 버튼-->
+        <div class="slider-control">
+            <div class="prev">
+                <button class="slideBtn" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20 44 0 24 20 4l2.8 2.85L5.65 24 22.8 41.15Z"/></svg>
+                </button>
+            </div>
+            <div class="next">
+                <button class="slideBtn" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m15.2 43.9-2.8-2.85L29.55 23.9 12.4 6.75l2.8-2.85 20 20Z"/></svg>
+                </button>
+            </div>
+        </div>
+<!-- 블럭창 -->
+        <div class="blocks">
+            <div class="block-1"></div>
+            <div class="block-2"></div>
+            <div class="block-3"></div>
+        </div>
+<!-- 오버레이창 -->
+        <div class="overlay"></div>
+<!-- 이미지 슬라이드 -->
+        <div class="image-slider">
+            <div class="image-slide" id="one"
+                style="background: url(files/slide03_camera.jpg) no-repeat 50% 50%; background-size: cover;">
+            </div>
+            <div class="image-slide" id="two"
+                style="background: url(files/slide01_pptapp.jpg) no-repeat 50% 50%; background-size: cover;">
+            </div>
+            <div class="image-slide" id="three"
+                style="background: url(files/slide02_pub.jpg) no-repeat 50% 50%; background-size: cover;">
+            </div>
+        </div>
+    </article>
+
+
+<!-- ------------------------------------- 2. 소개 -->
+    <article id="introduction">
+
+        <div class="mainTitle">WHO <br class="br" />I AM</div>
+        <div class="introText">
+            <p>Film Maker who can design,<br class="br" /> Designer who can make Film.</p>
+            <p>웹 디자인 기본기도 갖춘,<br class="br" /> 영상제작자이자 디자이너 김혜빈입니다.</p>
+            <br />
+            <p><span class="fontbold">2023.03</span> 영진직업전문학교 K-digital training - 수료</p>
+            <p><span class="fontbold">2023.01</span> 영진직업전문학교 송암전 UCC부문 - <span class="fontbold">우수상</span></p>
+            <p><span class="fontbold">2021.10 ~ 2022.07</span> 영진직업전문학교 취업홍보부 사원 - 영상콘텐츠 제작자</p>
+
+        </div>
+        <div class="introBox">
+
+            <div class="textInBox" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div class="num1 numbers">1</div>
+                <p class="fontbold">김혜빈</p>
+                <p>영상제작 경력자 & 신입 UI/UX디자이너</p>
+                <p>010-4162-3482</p>
+                <p>tb4162@naver.com</p>
+            </div>
+
+            <div class="textInBox" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div class="num2 numbers">2</div>
+                <p class="fontbold">사용 언어</p>
+                <div class="useSth">
+                    <div class="useName">HTML</div>
+                    <div class="graphBar">
+                        <div class="graph1 graphHTML"></div>
+                    </div>
+                </div>
+                <div class="useSth">
+                    <div class="useName">CSS</div>
+                    <div class="graphBar">
+                        <div class="graph1 graphCSS"></div>
+                    </div>
+                </div>
+              </div>
+            <div class="textInBox" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div class="num3 numbers">3</div>
+                <p class="fontbold">사용 툴</p>
+                <div class="useSth">
+                    <div class="useName">VScode</div>
+                    <div class="graphBar">
+                        <div class="graph2 graphVS"></div>
+                    </div>
+                </div>
+                <div class="useSth">
+                    <div class="useName">Ps</div>
+                    <div class="graphBar">
+                        <div class="graph2 graphPs"></div>
+                    </div>
+                </div>
+                <div class="useSth">
+                    <div class="useName">Ai</div>
+                    <div class="graphBar">
+                        <div class="graph2 graphAi"></div>
+                    </div>
+                </div>
+                <div class="useSth">
+                    <div class="useName">Xd</div>
+                    <div class="graphBar">
+                        <div class="graph2 graphXd"></div>
+                    </div>
+                </div>
+                <div class="useSth">
+                    <div class="useName">Premiere</div>
+                    <div class="graphBar">
+                        <div class="graph2 graphXd"></div>
+                    </div>
+                </div>
+                <div class="useSth">
+                    <div class="useName">Aftereffect</div>
+                    <div class="graphBar">
+                        <div class="graph2 graphXd"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="textInBox" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div class="num3 numbers">4</div>
+                <p class="fontbold">응용 기술</p>
+                <p>Open API 로그인, 지도, 알림톡 등</p>
+                <p>JSON, AJAX</p>
+                <p>React, Flutter</p>
+                <p>MySQL</p>
+            </div>
+        </div> 
+        
+    </article>
+
+<!-- ------------------------------------- 3. 포트폴리오 -->
+    <article id="project">
+        
+        <div class="mainTitle">PROJECT</div>
+        
+        <div class="projectMenu">
+            <span class="total fontbold">전체(7)</span>
+            <br class="br" /><br class="br" />
+            <span class="video">영상(4)</span>
+            <span class="web">웹앱콘텐츠_팀프로젝트(3)</span>
+        </div>   
+
+        <div class="cardWrapper">
+            <div class="card">
+
+                <div class="portfolio ourProject">
+                    <div class="pfImg yjmanImg"></div>
+                    <div class="pfText">
+                        <p><span class="fontSmall">영상</span></p>
+                        <h3><span class='fontbold'>영진직업전문학교 영상콘텐츠 제작 포트폴리오</span></h3>
+                        <p>· 영진직업전문학교에서 영상 콘텐츠 제작자로 근무하며 작업한 영상 포트폴리오</p>
+                        <p>· 기간 : 2021.10.05 ~ 2022.07.14(10개월)</p>
+                        <p>· 사용 : Adobe premiere, Adobe Aftereffect</p>
+
+                        <div class="buttonWrap">
+                           <button onclick=" window.open('https://youtu.be/i1zpYQCWv_8') ">VIDEO</button>
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="portfolio ourProject">
+                    <div class="pfImg yjlistImg"></div>
+                    <div class="pfText">
+                        <p><span class="fontSmall">영상</span></p>
+                        <h3><span class='fontbold'>영진직업전문학교 영상콘텐츠 제작 작업물</span></h3>
+                        <p>· 유튜브 재생목록에 업로드하여, 각 영상 작업물을 확인할 수 있음
+                        <p>· 사용 : Adobe premiere, Adobe Aftereffect, <br>Adobe Photoshop, Adobe Illustrator</p>
+                        <div class="buttonWrap">
+                            <button onclick=" window.open('https://www.youtube.com/playlist?list=PLkgloWds0aJcZju0hnR8M9lZvO_VOgBD2') ">PLAYLIST</button> 
+                        </div>                        
+                    </div>
+                </div>
+
+                
+
+                <div class="portfolio ourProject">
+                    <div class="pfImg icanImg"></div>
+                    <div class="pfText">
+                        <p><span class="fontSmall">영상</span></p>
+                        <h3><span class='fontbold'>현장스케치 영상 작업물</span></h3>
+                        <p> 행사 현장 스케치 영상으로 1일 현장 촬영 후 편집을 진행 </p>
+                        <p>· 역할 : 촬영 (1일), 컷편집 및 배경음악 삽입 + 타이틀 그래픽작업(2일)</p>
+                        <p>· 사용 : Adobe premiere, Adobe Aftereffect</p>
+                        <p><span class="fontSmall">2021.10</span></p>
+                        <div class="buttonWrap">
+                            <button onclick=" window.open('https://youtube.com/playlist?list=PLkgloWds0aJe7hxM04RXf9dBb812_VdM3') ">PLAYLIST</button>
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="portfolio ourProject">
+                    <div class="pfImg bicycleImg"></div>
+                    <div class="pfText">
+                        <p><span class="fontSmall">영상</span></p>
+                        <h3><span class='fontbold'>자전거 이용 활성화를 위한 사진·UCC 공모전</span></h3>
+                        <p>· 주제 : 자전거 안전 수칙</p>
+                        <p>· 기획 : 직장인을 메인 캐릭터로 선정하여 안전수칙을 알리는 영상을 기획</p>
+                        <p>· 역할 : 기획 및 영상 스크립트 작성(2일), <br>나래이션 (2일) 그래픽작업 및 편집(5일)</p>
+                        <p>· 사용 : Adobe premiere, Adobe Aftereffect, <br>Adobe Photoshop, Adobe Illustrator</p>
+                        <p>· 행정안전부 주최 자전거 이용 활성화를 위한 공모전 'UCC부문' - <span class="fontbold">장려상</span></p>
+                        <p><span class="fontSmall">2021.10</span></p>
+                        <div class="buttonWrap">
+                            <button onclick=" window.open('https://youtu.be/3IdKp2kH6Io') ">VIDEO</button>
+                        </div>                        
+                    </div>
+                </div>
+
+                
+
+                
+
+                <div class="portfolio myProject">
+                    <div class="pfImg hamoImg"></div>
+                    <div class="pfText">
+                        <p><span class="fontSmall">실무 팀프로젝트</span></p>
+                        <h3><span class='fontbold'>하모 (Hamo)</span></h3>
+                        <p>· 주제 : 하모 랜딩페이지</p>
+                        <p>· 기획 : 마케팅 목적의 하모 홍보페이지를 제작하고, 사업 신청을 받아 카카오톡으로 알림 서비스를 해주는 랜딩페이지 제작</p>
+                        <p>· 역할 : UX/UI 디자인(5일) </p>
+                        <p>· 사용 : Ps, Xd, HTML, CSS, JS, SOLAPI</p>
+                        <p>· 영진직업전문대학 주최 open API활용 경진대회 - <span class="fontbold">금상</span></p>
+                        <p><span class="fontSmall">2022.12 ~ 2023.01</span></p>
+                        <div class="buttonWrap">
+                            <button onclick=" window.open('files/hamo.pdf') ">PROPOSAL</button> <button onclick=" window.open('https://youtu.be/WqP-7LiT6kI') ">VIDEO</button> <button  onclick=" window.open('https://himzei.github.io/hamo/') ">HOMEPAGE</button>
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="portfolio myProject">
+                    <div class="pfImg aladinImg"></div>
+                    <div class="pfText">
+                        <p><span class="fontSmall">실무 팀프로젝트</span></p>
+                        <h3><span class='fontbold'>알라딘 중고서점</span></h3>
+                        <p>· 주제 : 알라딘 중고서점 홈페이지 리뉴얼</p>
+                        <p>· 기획 : 복잡했던 홈페이지 메인을 트랜드에 맞는 심플한 디자인으로 리뉴얼하고, Open API SNS로그인을 연동 후 회원정보 관리까지 기획</p>
+                        <p>· 역할 : UIUX 디자인(5일)</p>
+                        <p>· 사용 : HTML, CSS, JS, Node.js, PASSPORT, MySQL</p>
+                        <P>영진직업전문학교 송암전 - <span class="fontbold">최우수상</span></P>
+                        <P>영진직업전문학교 송암전 UCC부문 - <span class="fontbold">우수상</span></P>
+                        <p><span class="fontSmall">2022.11 ~ 2022.12</span></p>
+                        <div class="buttonWrap">
+                            <button onclick=" window.open('files/aladin.pdf') ">PROPOSAL</button> <button onclick=" window.open('https://youtu.be/tTG_vTHwGig') ">VIDEO 1</button> <button onclick=" window.open('https://youtu.be/SJGALPPaihI') ">VIDEO 2</button> <button  onclick="window.open('http://gusdn1832.dothome.co.kr/Alladin') ">HOMEPAGE</button>
+                        </div>                        
+                    </div>
+                </div>
+
+                <div class="portfolio myProject">
+                    <div class="pfImg pptImg"></div>
+                    <div class="pfText">
+                        <p><span class="fontSmall">실무 팀프로젝트</span></p>
+                        <h3><span class='fontbold'>파워풀포토투어(Powerful Photo Tour)</span></h3>
+                        <p>· 주제 : GPS를 활용한 하이브리드앱 개발</p>
+                        <p>· 기획 : 대구시민을 대상으로 지역 상권를 활성화 하고 명소를 안내해줄 수 있는 앱을 개발하기 위해, Open API의 GPS를 인증을 활용하여 특정 장소에 도착해 QR코드를 찍고 추억을 사진으로 기록할 수 있도록 기획</p>
+                        <p>· 역할 : 기획(7일) 및 디자인(7일)</p>
+                        <p>· 사용 : HTML, CSS, JS, Node.js, EJS, Express, KAKAO Map API</p>
+                        <p><span class="fontSmall">2023.02</span></p>
+                        <div class="buttonWrap">
+                            <button onclick=" window.open('files/powerfulphototour.pdf') ">PROPOSAL</button> <button onclick=" window.open('https://youtu.be/QwQ_AHZFr44') ">VIDEO</button>
+                        </div>                        
+                    </div>
+                </div>
+
+                
+
+
+            </div>
+        </div>
+    </article>
+
+<!-- ------------------------------------- 4. 컨택트 -->
+    <article id="contact">
+        <div class="mainTitle">CONTACT</div>
+
+        <div class="businessCard" data-aos="flip-right">
+                <div class="businessCardEnglish">
+                    <p class="jobName"><span>Film</span> maker & <span>UIUX</span> designer</p>
+                    <p class="name"><span>H</span>YE <span>BE</span>EN KIM</p>
+                </div>
+                <div class="businessCardKorea">
+                    <p class="jobName"><span>영상</span> 제작자 & <span>UIUX</span> 디자이너</p>
+                    <p class="name">김 혜 빈</p>                    
+                </div>    
+                <div class="phone_email">
+                    <p class="phone">010-4162-3482</p>
+                    <p class="email">tb4162@naver.com</p>
+                </div>
+        </div>
+    </article>
+
+<!-- ------------------------------------- 5. 푸터 -->
+    <footer>
+        Copyright © 2023 김혜빈. <br class="br" /> All rights reserved.
+    </footer>
+
+<!-- ------------------------------------- 탑버튼 -->
+    <a href="#mainSlide">
+        <div id="topBtn">            
+            <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m24 30.75-12-12 2.15-2.15L24 26.5l9.85-9.85L36 18.8Z"/></svg>
+        </div>
+    </a>
+    
+
+
+<!-- 자바스크립트 -->
+    <script src="js/script.js"></script>
+<!-- AOS 스크립트 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>
